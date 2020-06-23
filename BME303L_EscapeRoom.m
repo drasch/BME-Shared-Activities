@@ -1330,6 +1330,7 @@ set(HTimer, 'BackgroundColor', [0 0 0]);
 
 % Process Inputs
 input = -3599;
+var = [];
 if isscalar(input)
     TIME = input;
 elseif length(var{1}) == 6
