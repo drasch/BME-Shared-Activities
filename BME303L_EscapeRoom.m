@@ -61,7 +61,7 @@ case 'Initialize'
                         'Position',[0.01 0.01 0.69 0.98], ...
                         'Tag', 'RoomImage');
     ax = axes(RoomImage, 'Units', 'normalized', 'Position', [0 0 1 1]);
-    IM = imread('EscapeRoom.bmp'); % Default start-up image with game rules
+    IM = imread('EscapeRoom.png'); % Default start-up image with game rules
     image(IM);
     axis image
     axis off
@@ -235,7 +235,7 @@ case 'Initialize'
                  'Position',[0.705 0.085 0.285 0.67], ...
                  'Tag', 'CardInformation');
     ax2 = axes(p3, 'Units', 'normalized', 'Position', [0 0 1 1]);
-    IM = imread('EscapeRoomCard.bmp');
+    IM = imread('EscapeRoomCard.png');
     image(IM);
     axis image
     axis off
@@ -516,7 +516,7 @@ if Room == 2 % Signals & Systems Room
     title('Spacing Example 4');
     
     % Displays blank escape room card on secondary axis (ax2) of GUI
-    IM = imread(strcat(pwd, '/EscapeRoomCard.bmp'));
+    IM = imread(strcat(pwd, '/EscapeRoomCard.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -643,7 +643,7 @@ if Room == 3 % XRay Room
     
     % Displays X-ray escape room card on secondary axis (ax2) of GUI (says
     % M = ?, m = ?, x = ?)
-    IM = imread(strcat(pwd, '/XRay/EscapeRoomCard.bmp'));
+    IM = imread(strcat(pwd, '/XRay/EscapeRoomCard.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -750,7 +750,7 @@ if Room == 4 % CT Room
     axis equal 
     
     % Displays blank escape room card on secondary axis (ax2) of GUI
-    IM = imread(strcat(pwd, '/EscapeRoomCard.bmp'));
+    IM = imread(strcat(pwd, '/EscapeRoomCard.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -865,7 +865,7 @@ if Room == 5 % Ultrasound
     title('9. Tomato');
 
     % Displays blank escape room card on secondary axis (ax2) of GUI
-    IM = imread(strcat(pwd, '/EscapeRoomCard.bmp'));
+    IM = imread(strcat(pwd, '/EscapeRoomCard.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -895,11 +895,11 @@ if Room == 6 % MRI
     Num3 = RandomNumMRI(1,3); % Secret code value 3
     
     % Filenames of all of the possible MRI pulse sequence diagrams
-    files = {'MRI_GRE_TE3.bmp','MRI_GRE_TE8.bmp','MRI_GRE_TE13.bmp', ...
-             'MRI_GRE_TE18.bmp','MRI_GRE_TE23.bmp','MRI_GREy_TE11.bmp',...
-             'MRI_GREy_TE12.bmp','MRI_GREy_TE13.bmp','MRI_GREy_TE14.bmp',...
-             'MRI_GREy_TE15.bmp','MRI_Spiral1_TE13.bmp','MRI_Spiral2_TE13.bmp',...
-             'MRI_Spiral3_TE13.bmp','MRI_Spiral4_TE13.bmp','MRI_Spiral5_TE13.bmp'};
+    files = {'MRI_GRE_TE3.png','MRI_GRE_TE8.png','MRI_GRE_TE13.png', ...
+             'MRI_GRE_TE18.png','MRI_GRE_TE23.png','MRI_GREy_TE11.png',...
+             'MRI_GREy_TE12.png','MRI_GREy_TE13.png','MRI_GREy_TE14.png',...
+             'MRI_GREy_TE15.png','MRI_Spiral1_TE13.png','MRI_Spiral2_TE13.png',...
+             'MRI_Spiral3_TE13.png','MRI_Spiral4_TE13.png','MRI_Spiral5_TE13.png'};
          
     % Picks the proper file based on secret code value 1
     filename = strcat(pwd, '/MRI/', files{1,Num1});
@@ -915,7 +915,7 @@ if Room == 6 % MRI
     axis equal
     
     % Displays blank escape room card on secondary axis (ax2) of GUI
-    IM = imread(strcat(pwd, '/EscapeRoomCard.bmp'));
+    IM = imread(strcat(pwd, '/EscapeRoomCard.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -939,8 +939,8 @@ if Room == 7 %% Nuclear Medicine
     Num3 = RandomNumNM(1,3); % Secret code value 3
     
     % Filenames of all of the possible PET Roman Numeral diagrams
-    files = {'PET_I.bmp','PET_II.bmp','PET_III.bmp','PET_IV.bmp',...
-             'PET_V.bmp','PET_VI.bmp','PET_IX.bmp','PET_X.bmp',};
+    files = {'PET_I2.png','PET_II2.png','PET_III2.png','PET_IV2.png',...
+             'PET_V2.png','PET_VI2.png','PET_IX2.png','PET_X2.png',};
          
     % Picks the proper file based on secret code value 1
     filename = strcat(pwd, '/NuclearMedicine/', files{1,Num1});
@@ -956,7 +956,7 @@ if Room == 7 %% Nuclear Medicine
     axis equal
     
     % Displays blank escape room card on secondary axis (ax2) of GUI
-    IM = imread(strcat(pwd, '/EscapeRoomCard.bmp'));
+    IM = imread(strcat(pwd, '/EscapeRoomCard.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1128,11 +1128,11 @@ elseif Room == 5 & Code3 == Code3Num
     set(HCode3, 'Value', 1)
     
 elseif Room == 5 & Code2 == Code2Num
-    files = {'MRI_GRE_TE3.bmp','MRI_GRE_TE8.bmp','MRI_GRE_TE13.bmp', ...
-             'MRI_GRE_TE18.bmp','MRI_GRE_TE23.bmp','MRI_GREy_TE11.bmp',...
-             'MRI_GREy_TE12.bmp','MRI_GREy_TE13.bmp','MRI_GREy_TE14.bmp',...
-             'MRI_GREy_TE15.bmp','MRI_Spiral1_TE13.bmp','MRI_Spiral2_TE13.bmp',...
-             'MRI_Spiral3_TE13.bmp','MRI_Spiral4_TE13.bmp','MRI_Spiral5_TE13.bmp'};
+    files = {'MRI_GRE_TE3.png','MRI_GRE_TE8.png','MRI_GRE_TE13.png', ...
+             'MRI_GRE_TE18.png','MRI_GRE_TE23.png','MRI_GREy_TE11.png',...
+             'MRI_GREy_TE12.png','MRI_GREy_TE13.png','MRI_GREy_TE14.png',...
+             'MRI_GREy_TE15.png','MRI_Spiral1_TE13.png','MRI_Spiral2_TE13.png',...
+             'MRI_Spiral3_TE13.png','MRI_Spiral4_TE13.png','MRI_Spiral5_TE13.png'};
     filename = strcat(pwd, '/MRI/', files{1,Num3});
     
     % Displays puzzle on primary axis (ax) of GUI
@@ -1151,11 +1151,11 @@ elseif Room == 5 & Code2 == Code2Num
     set(HCode3, 'Enable', 'On')
 
 elseif Room == 5 & Code1 == Code1Num
-    files = {'MRI_GRE_TE3.bmp','MRI_GRE_TE8.bmp','MRI_GRE_TE13.bmp', ...
-             'MRI_GRE_TE18.bmp','MRI_GRE_TE23.bmp','MRI_GREy_TE11.bmp',...
-             'MRI_GREy_TE12.bmp','MRI_GREy_TE13.bmp','MRI_GREy_TE14.bmp',...
-             'MRI_GREy_TE15.bmp','MRI_Spiral1_TE13.bmp','MRI_Spiral2_TE13.bmp',...
-             'MRI_Spiral3_TE13.bmp','MRI_Spiral4_TE13.bmp','MRI_Spiral5_TE13.bmp'};
+    files = {'MRI_GRE_TE3.png','MRI_GRE_TE8.png','MRI_GRE_TE13.png', ...
+             'MRI_GRE_TE18.png','MRI_GRE_TE23.png','MRI_GREy_TE11.png',...
+             'MRI_GREy_TE12.png','MRI_GREy_TE13.png','MRI_GREy_TE14.png',...
+             'MRI_GREy_TE15.png','MRI_Spiral1_TE13.png','MRI_Spiral2_TE13.png',...
+             'MRI_Spiral3_TE13.png','MRI_Spiral4_TE13.png','MRI_Spiral5_TE13.png'};
     filename = strcat(pwd, '/MRI/', files{1,Num2});
     
     % Displays puzzle on primary axis (ax) of GUI
@@ -1185,8 +1185,8 @@ elseif Room == 6 & Code3 == Code3Num
     set(HCode3, 'Value', 1)
 
 elseif Room == 6 & Code2 == Code2Num
-    files = {'PET_I.bmp','PET_II.bmp','PET_III.bmp','PET_IV.bmp',...
-             'PET_V.bmp','PET_VI.bmp','PET_IX.bmp','PET_X.bmp',};
+    files = {'PET_I2.png','PET_II2.png','PET_III2.png','PET_IV2.png',...
+             'PET_V2.png','PET_VI2.png','PET_IX2.png','PET_X2.png',};
     filename = strcat(pwd, '/NuclearMedicine/', files{1,Num3});
     
     % Displays puzzle on primary axis (ax) of GUI
@@ -1205,8 +1205,8 @@ elseif Room == 6 & Code2 == Code2Num
     set(HCode3, 'Enable', 'On')
     
 elseif Room == 6 & Code1 == Code1Num
-    files = {'PET_I.bmp','PET_II.bmp','PET_III.bmp','PET_IV.bmp',...
-             'PET_V.bmp','PET_VI.bmp','PET_IX.bmp','PET_X.bmp',};
+    files = {'PET_I2.png','PET_II2.png','PET_III2.png','PET_IV2.png',...
+             'PET_V2.png','PET_VI2.png','PET_IX2.png','PET_X2.png',};
     filename = strcat(pwd, '/NuclearMedicine/', files{1,Num2});
     
     % Displays puzzle on primary axis (ax) of GUI
@@ -1286,7 +1286,7 @@ if RoomsSolved == 6
     % Displays Escape Room Exit image on primary axis (ax) of GUI
     % Note: The subplot syntax "subplot(1,1,1)" was necessary to avoid a
     % weird issue where the images kept overlapping each other.
-    filename = strcat(pwd, '/EscapeRoomExit.bmp');
+    filename = strcat(pwd, '/EscapeRoomExit.png');
     ax = axes(RoomImage, 'Units', 'normalized', 'Position', [0 0 1 1]);
     axes(ax);
     cla
@@ -1294,7 +1294,7 @@ if RoomsSolved == 6
     imshow(filename);
     axis equal
     
-    IM = imread(strcat(pwd, '/EscapeRoomCard.bmp'));
+    IM = imread(strcat(pwd, '/EscapeRoomCard.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1363,37 +1363,37 @@ HPenaltyTime = findobj('Tag', 'PenaltyTime');
 Room = get(HRoomName, 'UserData')-1;
 
 if Room == 1
-    IM = imread(strcat(pwd, '/SignalsSystems/', 'Hint1.bmp'));
+    IM = imread(strcat(pwd, '/SignalsSystems/', 'Hint1.png'));
     axes(ax2); 
     image(IM);
     axis image
     axis off
 elseif Room == 2
-    IM = imread(strcat(pwd, '/XRay/', 'Hint1.bmp'));
+    IM = imread(strcat(pwd, '/XRay/', 'Hint1.png'));
     axes(ax2);
     image(IM);
     axis image
     axis off
 elseif Room == 3
-    IM = imread(strcat(pwd, '/CT/', 'Hint1.bmp'));
+    IM = imread(strcat(pwd, '/CT/', 'Hint1.png'));
     axes(ax2);
     image(IM);
     axis image
     axis off
 elseif Room == 4
-    IM = imread(strcat(pwd, '/Ultrasound/', 'Hint1.bmp'));
+    IM = imread(strcat(pwd, '/Ultrasound/', 'Hint1.png'));
     axes(ax2);
     image(IM);
     axis image
     axis off
 elseif Room == 5
-    IM = imread(strcat(pwd, '/MRI/', 'Hint1.bmp'));
+    IM = imread(strcat(pwd, '/MRI/', 'Hint1.png'));
     axes(ax2);
     image(IM);
     axis image
     axis off
 elseif Room == 6
-    IM = imread(strcat(pwd, '/NuclearMedicine/', 'Hint1.bmp'));
+    IM = imread(strcat(pwd, '/NuclearMedicine/', 'Hint1.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1430,37 +1430,37 @@ HPenaltyTime = findobj('Tag', 'PenaltyTime');
 Room = get(HRoomName, 'UserData')-1;
 
 if Room == 1
-    IM = imread(strcat(pwd, '/SignalsSystems/', 'Hint2.bmp'));
+    IM = imread(strcat(pwd, '/SignalsSystems/', 'Hint2.png'));
     axes(ax2); 
     image(IM);
     axis image
     axis off
 elseif Room == 2
-    IM = imread(strcat(pwd, '/XRay/', 'Hint2.bmp'));
+    IM = imread(strcat(pwd, '/XRay/', 'Hint2.png'));
     axes(ax2); 
     image(IM);
     axis image
     axis off
 elseif Room == 3
-    IM = imread(strcat(pwd, '/CT/', 'Hint2.bmp'));
+    IM = imread(strcat(pwd, '/CT/', 'Hint2.png'));
     axes(ax2);
     image(IM);
     axis image
     axis off
 elseif Room == 4
-    IM = imread(strcat(pwd, '/Ultrasound/', 'Hint2.bmp'));
+    IM = imread(strcat(pwd, '/Ultrasound/', 'Hint2.png'));
     axes(ax2);
     image(IM);
     axis image
     axis off
 elseif Room == 5
-    IM = imread(strcat(pwd, '/MRI/', 'Hint2.bmp'));
+    IM = imread(strcat(pwd, '/MRI/', 'Hint2.png'));
     axes(ax2);
     image(IM);
     axis image
     axis off
 elseif Room == 6
-    IM = imread(strcat(pwd, '/NuclearMedicine/', 'Hint2.bmp'));
+    IM = imread(strcat(pwd, '/NuclearMedicine/', 'Hint2.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1504,7 +1504,7 @@ HRoom6Solved   = findobj('Tag','Room6Solved');
 HTotalTime = findobj('Tag', 'TotalTime');
 
 if Room == 1
-    IM = imread(strcat(pwd, '/SignalsSystems/', 'Solution.bmp'));
+    IM = imread(strcat(pwd, '/SignalsSystems/', 'Solution.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1512,7 +1512,7 @@ if Room == 1
     set(HRoom1Solved, 'UserData', 1)
     set(HRoom1Solved, 'BackgroundColor', [0, 0.5, 0])
 elseif Room == 2
-    IM = imread(strcat(pwd, '/XRay/', 'Solution.bmp'));
+    IM = imread(strcat(pwd, '/XRay/', 'Solution.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1520,7 +1520,7 @@ elseif Room == 2
     set(HRoom2Solved, 'UserData', 1)
     set(HRoom2Solved, 'BackgroundColor', [0, 0.5, 0])
 elseif Room == 3
-    IM = imread(strcat(pwd, '/CT/', 'Solution.bmp'));
+    IM = imread(strcat(pwd, '/CT/', 'Solution.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1528,7 +1528,7 @@ elseif Room == 3
     set(HRoom3Solved, 'UserData', 1)
     set(HRoom3Solved, 'BackgroundColor', [0, 0.5, 0])
 elseif Room == 4
-    IM = imread(strcat(pwd, '/Ultrasound/', 'Solution.bmp'));
+    IM = imread(strcat(pwd, '/Ultrasound/', 'Solution.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1536,7 +1536,7 @@ elseif Room == 4
     set(HRoom4Solved, 'UserData', 1)
     set(HRoom4Solved, 'BackgroundColor', [0, 0.5, 0])
 elseif Room == 5
-    IM = imread(strcat(pwd, '/MRI/', 'Solution.bmp'));
+    IM = imread(strcat(pwd, '/MRI/', 'Solution.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1544,7 +1544,7 @@ elseif Room == 5
     set(HRoom5Solved, 'UserData', 1)
     set(HRoom5Solved, 'BackgroundColor', [0, 0.5, 0])
 elseif Room == 6
-    IM = imread(strcat(pwd, '/NuclearMedicine/', 'Solution.bmp'));
+    IM = imread(strcat(pwd, '/NuclearMedicine/', 'Solution.png'));
     axes(ax2);
     image(IM);
     axis image
@@ -1606,7 +1606,7 @@ if RoomsSolved == 6
     
     set(HTotalTime,'String',TotalTimeStrNew);
     
-    filename = strcat(pwd, '/EscapeRoomExit.bmp');
+    filename = strcat(pwd, '/EscapeRoomExit.png');
     ax = axes(RoomImage, 'Units', 'normalized', 'Position', [0 0 1 1]);
     axes(ax);
     cla
